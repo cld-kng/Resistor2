@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/simon/Documents/GitHub/Resistor2/app/src/main/res/layout-land/activity_main.xml" value="0.115625" />
         <entry key="..\:/Users/simon/Documents/GitHub/Resistor2/app/src/main/res/layout/activity_main.xml" value="0.12031408308004053" />
+        <entry key="..\:/Users/simon/Documents/GitHub/Resistor2/app/src/main/res/menu/menu_main.xml" value="0.20555555555555555" />
+        <entry key="..\:/Users/simon/Documents/GitHub/Resistor2/app/src/main/res/xml/pref_colors.xml" value="0.12031408308004053" />
       </map>
     </option>
   </component>
