@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
     ImageView bandOne, bandTwo, bandThree, bandTolerance;
     NumberPicker pickerOne, pickerTwo, pickerThree, pickerTolerance;
 
-    public static int d1, d2;
-    public static double m = 1;
+    public static int pickerOneAsInt, pickerTwoAsInt;
+    public static double pickerThreeAsDouble = 1;
     public static int tolerance;
 
     @Override
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
         pickerOne
                 .setOnValueChangedListener((picker, oldVal, newVal) -> {
-                    d1 = newVal;
+                    pickerOneAsInt = newVal;
 
                     switch (newVal) {
                         case 0:
@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
 
         pickerTwo
                 .setOnValueChangedListener((picker, oldVal, newVal) -> {
-                    d2 = newVal;
+                    pickerTwoAsInt = newVal;
 
                     switch (newVal) {
                         case 0:
@@ -156,55 +156,55 @@ public class MainActivity extends AppCompatActivity {
 
         pickerThree
                 .setOnValueChangedListener((picker, oldVal, newVal) -> {
-                    m = newVal;
+                    pickerThreeAsDouble = newVal;
                     switch (newVal) {
                         case 0:
                             bandThree.setImageResource(R.drawable.black);
-                            m = 1;
+                            pickerThreeAsDouble = 1;
                             break;
                         case 1:
                             bandThree.setImageResource(R.drawable.brown);
-                            m = 10;
+                            pickerThreeAsDouble = 10;
                             break;
                         case 2:
                             bandThree.setImageResource(R.drawable.red);
-                            m = 100;
+                            pickerThreeAsDouble = 100;
                             break;
                         case 3:
                             bandThree.setImageResource(R.drawable.orange);
-                            m = 1000;
+                            pickerThreeAsDouble = 1000;
                             break;
                         case 4:
                             bandThree.setImageResource(R.drawable.yellow);
-                            m = 10000;
+                            pickerThreeAsDouble = 10000;
                             break;
                         case 5:
                             bandThree.setImageResource(R.drawable.green);
-                            m = 100000;
+                            pickerThreeAsDouble = 100000;
                             break;
                         case 6:
                             bandThree.setImageResource(R.drawable.blue);
-                            m = 1000000;
+                            pickerThreeAsDouble = 1000000;
                             break;
                         case 7:
                             bandThree.setImageResource(R.drawable.violet);
-                            m = 10000000;
+                            pickerThreeAsDouble = 10000000;
                             break;
                         case 8:
                             bandThree.setImageResource(R.drawable.grey);
-                            m = 100000000;
+                            pickerThreeAsDouble = 100000000;
                             break;
                         case 9:
                             bandThree.setImageResource(R.drawable.white);
-                            m = 1000000000;
+                            pickerThreeAsDouble = 1000000000;
                             break;
                         case 10:
                             bandThree.setImageResource(R.drawable.gold);
-                            m = 0.1;
+                            pickerThreeAsDouble = 0.1;
                             break;
                         case 11:
                             bandThree.setImageResource(R.drawable.silver);
-                            m = 0.01;
+                            pickerThreeAsDouble = 0.01;
                             break;
                     }
 
@@ -311,7 +311,7 @@ public class MainActivity extends AppCompatActivity {
 
     public String calcOhms() {
 
-        double ohmage = ((d1 * 10) + d2) * m;
+        double ohmage = ((pickerOneAsInt * 10) + pickerTwoAsInt) * pickerThreeAsDouble;
         long ohms = Math.round(ohmage);
         String toleranceValue;
 
