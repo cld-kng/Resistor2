@@ -74,180 +74,165 @@ public class MainActivity extends AppCompatActivity {
         updateColors();
 
         pickerOne
-                .setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
-                    @Override
-                    public void onValueChange(NumberPicker picker, int oldVal,
-                                              int newVal) {
-                        d1 = newVal;
+                .setOnValueChangedListener((picker, oldVal, newVal) -> {
+                    d1 = newVal;
 
-                        switch (newVal) {
-                            case 0:
-                                bandOne.setImageResource(R.drawable.black);
-                                break;
-                            case 1:
-                                bandOne.setImageResource(R.drawable.brown);
-                                break;
-                            case 2:
-                                bandOne.setImageResource(R.drawable.red);
-                                break;
-                            case 3:
-                                bandOne.setImageResource(R.drawable.orange);
-                                break;
-                            case 4:
-                                bandOne.setImageResource(R.drawable.yellow);
-                                break;
-                            case 5:
-                                bandOne.setImageResource(R.drawable.green);
-                                break;
-                            case 6:
-                                bandOne.setImageResource(R.drawable.blue);
-                                break;
-                            case 7:
-                                bandOne.setImageResource(R.drawable.violet);
-                                break;
-                            case 8:
-                                bandOne.setImageResource(R.drawable.grey);
-                                break;
-                            case 9:
-                                bandOne.setImageResource(R.drawable.white);
-                                break;
-                        }
-
-                        calcOhms();
-
+                    switch (newVal) {
+                        case 0:
+                            bandOne.setImageResource(R.drawable.black);
+                            break;
+                        case 1:
+                            bandOne.setImageResource(R.drawable.brown);
+                            break;
+                        case 2:
+                            bandOne.setImageResource(R.drawable.red);
+                            break;
+                        case 3:
+                            bandOne.setImageResource(R.drawable.orange);
+                            break;
+                        case 4:
+                            bandOne.setImageResource(R.drawable.yellow);
+                            break;
+                        case 5:
+                            bandOne.setImageResource(R.drawable.green);
+                            break;
+                        case 6:
+                            bandOne.setImageResource(R.drawable.blue);
+                            break;
+                        case 7:
+                            bandOne.setImageResource(R.drawable.violet);
+                            break;
+                        case 8:
+                            bandOne.setImageResource(R.drawable.grey);
+                            break;
+                        case 9:
+                            bandOne.setImageResource(R.drawable.white);
+                            break;
                     }
+
+                    resistorValue.setText(calcOhms());
+
                 });
 
         pickerTwo
-                .setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
-                    @Override
-                    public void onValueChange(NumberPicker picker, int oldVal,
-                                              int newVal) {
-                        d2 = newVal;
+                .setOnValueChangedListener((picker, oldVal, newVal) -> {
+                    d2 = newVal;
 
-                        switch (newVal) {
-                            case 0:
-                                bandTwo.setImageResource(R.drawable.black);
-                                break;
-                            case 1:
-                                bandTwo.setImageResource(R.drawable.brown);
-                                break;
-                            case 2:
-                                bandTwo.setImageResource(R.drawable.red);
-                                break;
-                            case 3:
-                                bandTwo.setImageResource(R.drawable.orange);
-                                break;
-                            case 4:
-                                bandTwo.setImageResource(R.drawable.yellow);
-                                break;
-                            case 5:
-                                bandTwo.setImageResource(R.drawable.green);
-                                break;
-                            case 6:
-                                bandTwo.setImageResource(R.drawable.blue);
-                                break;
-                            case 7:
-                                bandTwo.setImageResource(R.drawable.violet);
-                                break;
-                            case 8:
-                                bandTwo.setImageResource(R.drawable.grey);
-                                break;
-                            case 9:
-                                bandTwo.setImageResource(R.drawable.white);
-                                break;
-                        }
-
-                        calcOhms();
+                    switch (newVal) {
+                        case 0:
+                            bandTwo.setImageResource(R.drawable.black);
+                            break;
+                        case 1:
+                            bandTwo.setImageResource(R.drawable.brown);
+                            break;
+                        case 2:
+                            bandTwo.setImageResource(R.drawable.red);
+                            break;
+                        case 3:
+                            bandTwo.setImageResource(R.drawable.orange);
+                            break;
+                        case 4:
+                            bandTwo.setImageResource(R.drawable.yellow);
+                            break;
+                        case 5:
+                            bandTwo.setImageResource(R.drawable.green);
+                            break;
+                        case 6:
+                            bandTwo.setImageResource(R.drawable.blue);
+                            break;
+                        case 7:
+                            bandTwo.setImageResource(R.drawable.violet);
+                            break;
+                        case 8:
+                            bandTwo.setImageResource(R.drawable.grey);
+                            break;
+                        case 9:
+                            bandTwo.setImageResource(R.drawable.white);
+                            break;
                     }
+
+                    resistorValue.setText(calcOhms());
                 });
 
         pickerThree
-                .setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
-                    @Override
-                    public void onValueChange(NumberPicker picker, int oldVal,
-                                              int newVal) {
-                        m = newVal;
-                        switch (newVal) {
-                            case 0:
-                                bandThree.setImageResource(R.drawable.black);
-                                m = 1;
-                                break;
-                            case 1:
-                                bandThree.setImageResource(R.drawable.brown);
-                                m = 10;
-                                break;
-                            case 2:
-                                bandThree.setImageResource(R.drawable.red);
-                                m = 100;
-                                break;
-                            case 3:
-                                bandThree.setImageResource(R.drawable.orange);
-                                m = 1000;
-                                break;
-                            case 4:
-                                bandThree.setImageResource(R.drawable.yellow);
-                                m = 10000;
-                                break;
-                            case 5:
-                                bandThree.setImageResource(R.drawable.green);
-                                m = 100000;
-                                break;
-                            case 6:
-                                bandThree.setImageResource(R.drawable.blue);
-                                m = 1000000;
-                                break;
-                            case 7:
-                                bandThree.setImageResource(R.drawable.violet);
-                                m = 10000000;
-                                break;
-                            case 8:
-                                bandThree.setImageResource(R.drawable.grey);
-                                m = 100000000;
-                                break;
-                            case 9:
-                                bandThree.setImageResource(R.drawable.white);
-                                m = 1000000000;
-                                break;
-                            case 10:
-                                bandThree.setImageResource(R.drawable.gold);
-                                m = 0.1;
-                                break;
-                            case 11:
-                                bandThree.setImageResource(R.drawable.silver);
-                                m = 0.01;
-                                break;
-                        }
-
-                        calcOhms();
+                .setOnValueChangedListener((picker, oldVal, newVal) -> {
+                    m = newVal;
+                    switch (newVal) {
+                        case 0:
+                            bandThree.setImageResource(R.drawable.black);
+                            m = 1;
+                            break;
+                        case 1:
+                            bandThree.setImageResource(R.drawable.brown);
+                            m = 10;
+                            break;
+                        case 2:
+                            bandThree.setImageResource(R.drawable.red);
+                            m = 100;
+                            break;
+                        case 3:
+                            bandThree.setImageResource(R.drawable.orange);
+                            m = 1000;
+                            break;
+                        case 4:
+                            bandThree.setImageResource(R.drawable.yellow);
+                            m = 10000;
+                            break;
+                        case 5:
+                            bandThree.setImageResource(R.drawable.green);
+                            m = 100000;
+                            break;
+                        case 6:
+                            bandThree.setImageResource(R.drawable.blue);
+                            m = 1000000;
+                            break;
+                        case 7:
+                            bandThree.setImageResource(R.drawable.violet);
+                            m = 10000000;
+                            break;
+                        case 8:
+                            bandThree.setImageResource(R.drawable.grey);
+                            m = 100000000;
+                            break;
+                        case 9:
+                            bandThree.setImageResource(R.drawable.white);
+                            m = 1000000000;
+                            break;
+                        case 10:
+                            bandThree.setImageResource(R.drawable.gold);
+                            m = 0.1;
+                            break;
+                        case 11:
+                            bandThree.setImageResource(R.drawable.silver);
+                            m = 0.01;
+                            break;
                     }
+
+                    resistorValue.setText(calcOhms());
                 });
-        pickerTolerance.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
-            @Override
-            public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+        pickerTolerance.setOnValueChangedListener((picker, oldVal, newVal) -> {
 
-                tolerance = newVal;
+            tolerance = newVal;
 
-                switch (newVal) {
-                    case 0:
-                        bandTolerance.setImageResource(R.drawable.none);
-                        break;
-                    case 1:
-                        bandTolerance.setImageResource(R.drawable.brown);
-                        break;
-                    case 2:
-                        bandTolerance.setImageResource(R.drawable.red);
-                        break;
-                    case 3:
-                        bandTolerance.setImageResource(R.drawable.gold);
-                        break;
-                    case 4:
-                        bandTolerance.setImageResource(R.drawable.silver);
-                        break;
-                }
-
-                calcOhms();
+            switch (newVal) {
+                case 0:
+                    bandTolerance.setImageResource(R.drawable.none);
+                    break;
+                case 1:
+                    bandTolerance.setImageResource(R.drawable.brown);
+                    break;
+                case 2:
+                    bandTolerance.setImageResource(R.drawable.red);
+                    break;
+                case 3:
+                    bandTolerance.setImageResource(R.drawable.gold);
+                    break;
+                case 4:
+                    bandTolerance.setImageResource(R.drawable.silver);
+                    break;
             }
+
+            resistorValue.setText(calcOhms());
         });
     }
 
@@ -276,7 +261,7 @@ public class MainActivity extends AppCompatActivity {
         pickerTolerance.setValue(pickerPosArray[3]);
 
         updateColors();
-        calcOhms();
+        resistorValue.setText(calcOhms());
     }
 
 
@@ -324,34 +309,31 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void calcOhms() {
+    public String calcOhms() {
 
         double ohmage = ((d1 * 10) + d2) * m;
         long ohms = Math.round(ohmage);
         String toleranceValue;
 
         DecimalFormat df = new DecimalFormat("#.##");
-        ohmage = Double.valueOf(df.format(ohmage));
+        ohmage = Double.parseDouble(df.format(ohmage));
 
         String Result;
 
         switch (tolerance) {
-            case 0:
-                toleranceValue = "+/- 20%";
-                break;
-            case 1:
+            case 1: //brown
                 toleranceValue = "+/- 1%";
                 break;
-            case 2:
+            case 2: //red band
                 toleranceValue = "+/- 2%";
                 break;
-            case 3:
+            case 3: //gold band
                 toleranceValue = "+/- 5%";
                 break;
-            case 4:
-                toleranceValue = "+/- 5%";
+            case 4: //silver band
+                toleranceValue = "+/- 10%";
                 break;
-            default:
+            default: //no band or 0;
                 toleranceValue = "+/- 20%";
                 break;
         }
@@ -365,7 +347,9 @@ public class MainActivity extends AppCompatActivity {
         else if (ohmage >= 1000000) Result = "" + (ohms / 1000000) + " MOhms " + toleranceValue;
         else Result = "Invalid Value " + toleranceValue;
 
-        resistorValue.setText(Result);
+        return Result;
+
+
 
     }
 
