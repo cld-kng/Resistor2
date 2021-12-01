@@ -1,0 +1,135 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/resValue"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/res_value"
+        android:gravity="center"
+        android:text="@string/res_value" />
+
+    <LinearLayout
+        android:id="@+id/layoutImages"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/resValue"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/resLeft"
+            android:maxHeight="50dp"
+            android:maxWidth="50dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/resleft" />
+
+        <ImageView
+            android:id="@+id/colorOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/bandOne"
+            android:scaleType="fitXY"
+            android:src="@drawable/black" />
+
+        <ImageView
+            android:id="@+id/colorTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/bandTwo"
+            android:scaleType="fitXY"
+            android:src="@drawable/orange" />
+
+        <ImageView
+            android:id="@+id/colorThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/bandThree"
+            android:scaleType="fitXY"
+            android:src="@drawable/orange" />
+
+        <ImageView
+            android:id="@+id/spacer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/spacer"
+            android:scaleType="fitXY"
+            android:src="@drawable/spacer" />
+
+        <ImageView
+            android:id="@+id/Tolerance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/tolerance"
+            android:scaleType="fitXY"
+            android:src="@drawable/gold" />
+
+        <ImageView
+            android:id="@+id/Right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/resRight"
+            android:scaleType="fitXY"
+            android:src="@drawable/resright" />
+
+        <NumberPicker
+            android:id="@+id/bandOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:descendantFocusability="blocksDescendants"/>
+
+        <NumberPicker
+            android:id="@+id/bandTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:descendantFocusability="blocksDescendants"/>
+
+        <NumberPicker
+            android:id="@+id/bandThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:descendantFocusability="blocksDescendants"/>
+
+        <NumberPicker
+            android:id="@+id/bandTolerance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:descendantFocusability="blocksDescendants"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutSpinners"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutImages"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+
+    </LinearLayout>
+
+</RelativeLayout>

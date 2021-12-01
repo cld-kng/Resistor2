@@ -1,0 +1,18 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <yuku.ambilwarna.widget.AmbilWarnaPreference
+        android:defaultValue="0xff6699cc"
+        android:key="text_color"
+        android:title="Text Color"
+        app:supportsAlpha="false"
+        />
+
+    <yuku.ambilwarna.widget.AmbilWarnaPreference
+        android:defaultValue="0xff6699cc"
+        android:key="bg_color"
+        android:title="Background Color"
+        app:supportsAlpha="false" />
+
+
+</PreferenceScreen>

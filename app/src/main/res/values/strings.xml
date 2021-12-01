@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Resistor2</string>
+    <string name="action_settings">Settings</string>
+    <string name="resLeft">Left</string>
+    <string name="bandOne">BandOne</string>
+    <string name="bandTwo">BandTwo</string>
+    <string name="bandThree">BandThree</string>
+    <string name="spacer">Spacer</string>
+    <string name="tolerance">Tolerance</string>
+    <string name="resRight">Right</string>
+
+    <string name="res_value">resister value</string>
+    <string name="pref_header_bgcolor">Background Color</string>
+    <string name="pref_header_textcolor">Text Color</string>
+
+    <string name="title_activity_settings">Settings</string>
+
+
+</resources>
